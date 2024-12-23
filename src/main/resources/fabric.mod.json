@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "unnamed-meteor-addon",
   "version": "${version}",
-  "name": "Addon Template",
-  "description": "An addon template for Meteor Client addons.",
+  "name": "Unnamed Addon",
+  "description": "Addons, yay.",
   "authors": [
-    "seasnail"
+    "blindedbythesun"
   ],
   "contact": {
-    "repo": "https://github.com/MeteorDevelopment/meteor-addon-template"
+    "repo": "https://github.com/blindedbythesun/unnamed-meteor-addons"
   },
   "icon": "assets/template/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "com.example.addon.AddonTemplate"
+      "me.sun.unnamed.Addon"
     ]
   },
   "mixins": [
