@@ -30,7 +30,6 @@ public class ElytraFlyPlusSimple extends ElytraFlyPlusMode {
                 double yaw = Math.toRadians(mc.player.getYaw());;
 
                 float movementSpeed = (float) Math.sqrt(Math.pow(mc.player.getVelocity().x, 2) + Math.pow(mc.player.getVelocity().z, 2));
-                System.out.println(movementSpeed);
                 if(movementSpeed < settings.maxSpeedSimple.get()/20d) {
                     // If you aim up you cant accelerate as fast without flagging. (Constantiam)
                     double speed = mc.options.jumpKey.isPressed() ? settings.verticalSpeed.get() : settings.horizontalAcceleration.get();
