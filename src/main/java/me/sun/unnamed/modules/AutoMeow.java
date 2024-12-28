@@ -47,11 +47,11 @@ public class AutoMeow extends Module {
         }else {
             // you fucking idiot min is above max
             if(delayMinS.get() > delayMaxS.get()) {
+                ChatUtils.sendMsg(Text.of("Meow delay max must be above min"));
                 this.toggle();
                 meowDelay = 1000;
                 return;
             }
-            ChatUtils.sendMsg(Text.of("Meow delay max must be above min"));
             meowDelay = (long) (((Math.random() * (delayMaxS.get() - delayMinS.get())) + delayMinS.get()) * 1000);
         }
     }
