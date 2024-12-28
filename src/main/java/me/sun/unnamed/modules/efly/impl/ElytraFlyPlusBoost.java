@@ -2,9 +2,7 @@ package me.sun.unnamed.modules.efly.impl;
 
 import me.sun.unnamed.modules.efly.ElytraFlyPlusMode;
 import me.sun.unnamed.modules.efly.ElytraFlyPlusModes;
-import meteordevelopment.meteorclient.events.entity.player.PlayerMoveEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
-import meteordevelopment.meteorclient.mixininterface.IVec3d;
 import net.minecraft.util.math.Vec3d;
 
 public class ElytraFlyPlusBoost extends ElytraFlyPlusMode {

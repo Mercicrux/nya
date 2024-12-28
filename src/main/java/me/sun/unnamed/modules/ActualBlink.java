@@ -1,16 +1,7 @@
 package me.sun.unnamed.modules;
 
 import me.sun.unnamed.Addon;
-import me.sun.unnamed.modules.efly.ElytraFlyPlusMode;
-import me.sun.unnamed.modules.efly.ElytraFlyPlusModes;
-import me.sun.unnamed.modules.efly.impl.ElytraFlyPlusBoost;
-import me.sun.unnamed.modules.efly.impl.ElytraFlyPlusSimple;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
-import meteordevelopment.meteorclient.events.world.TickEvent;
-import meteordevelopment.meteorclient.settings.DoubleSetting;
-import meteordevelopment.meteorclient.settings.EnumSetting;
-import meteordevelopment.meteorclient.settings.Setting;
-import meteordevelopment.meteorclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.network.packet.Packet;
