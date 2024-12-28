@@ -1,6 +1,7 @@
 package me.sun.unnamed;
 
 import me.sun.unnamed.modules.ActualBlink;
+import me.sun.unnamed.modules.AutoMeow;
 import me.sun.unnamed.modules.efly.ElytraFlyPlus;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.GithubRepo;
@@ -20,6 +21,7 @@ public class Addon extends MeteorAddon {
         // Modules
         Modules.get().add(new ElytraFlyPlus());
         Modules.get().add(new ActualBlink());
+        Modules.get().add(new AutoMeow());
     }
 
     @Override
