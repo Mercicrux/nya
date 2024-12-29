@@ -19,7 +19,7 @@ public class AutoMeow extends Module {
 
     public long lastMeowTime, meowDelay;
     public List<String> meows = Arrays.asList("meow", "mrrow", "nyaa", "mrrrp nyaa", "mrrp");
-    public List<String> suffixes = Arrays.asList("~", "~ ;3", "~ :3", ";3", ":3", ">~<", ">w<", "~ >w<");
+    public List<String> suffixes = Arrays.asList("~", "~ ;3", "~ :3", " ;3", " :3", " >~<", " >w<", "~ >w<");
     private final SettingGroup sgGeneral = this.settings.getDefaultGroup();
     private Random random = new Random();
 
@@ -70,7 +70,7 @@ public class AutoMeow extends Module {
     @EventHandler
     private void onPreTick(TickEvent.Pre event) {
         if(System.currentTimeMillis() >= lastMeowTime + meowDelay) {
-            ChatUtils.sendPlayerMsg(meows.get(random.nextInt(meows.size())) + " " + suffixes.get(random.nextInt(suffixes.size())));
+            ChatUtils.sendPlayerMsg(meows.get(random.nextInt(meows.size())) + suffixes.get(random.nextInt(suffixes.size())));
             generateDelay();
             lastMeowTime = System.currentTimeMillis();
         }
