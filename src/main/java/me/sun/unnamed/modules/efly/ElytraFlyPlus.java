@@ -2,7 +2,9 @@ package me.sun.unnamed.modules.efly;
 
 import me.sun.unnamed.Addon;
 import me.sun.unnamed.modules.efly.impl.ElytraFlyPlusBoost;
+import me.sun.unnamed.modules.efly.impl.ElytraFlyPlusPacket;
 import me.sun.unnamed.modules.efly.impl.ElytraFlyPlusSimple;
+import me.sun.unnamed.modules.efly.impl.ElytraFlyPlusTest;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.settings.DoubleSetting;
@@ -15,6 +17,7 @@ import meteordevelopment.orbit.EventHandler;
 public class ElytraFlyPlus extends Module {
     private final SettingGroup sgGeneral = this.settings.getDefaultGroup();
     private final SettingGroup sgSimple = this.settings.createGroup("Simple");
+    private final SettingGroup sgPacket = this.settings.createGroup("Packet");
 
     public final Setting<ElytraFlyPlusModes> flightMode = sgGeneral.add(new EnumSetting.Builder<ElytraFlyPlusModes>()
         .name("mode")
@@ -31,6 +34,8 @@ public class ElytraFlyPlus extends Module {
         switch (mode) {
             case Boost -> currentMode = new ElytraFlyPlusBoost();
             case Simple -> currentMode = new ElytraFlyPlusSimple();
+            case Packet -> currentMode = new ElytraFlyPlusPacket();
+            case Test -> currentMode = new ElytraFlyPlusTest();
         }
     }
 
@@ -72,6 +77,25 @@ public class ElytraFlyPlus extends Module {
         .build()
     );
 
+    public final Setting<Double> maxSpeedPacket = sgPacket.add(new DoubleSetting.Builder()
+        .name("Max Speed")
+        .description("Max BPS.")
+        .defaultValue(70.0d)
+        .min(10.0d)
+        .sliderMax(100.0d)
+        .visible(() -> flightMode.get() == ElytraFlyPlusModes.Packet)
+        .build()
+    );
+
+    public final Setting<Double> accelerationPacket = sgSimple.add(new DoubleSetting.Builder()
+        .name("Acceleration")
+        .description("The speed of acceleration.")
+        .defaultValue(0.06d)
+        .range(0.01d, 0.09d)
+        .visible(() -> flightMode.get() == ElytraFlyPlusModes.Packet)
+        .build()
+    );
+
     public ElytraFlyPlus() {
         super(Addon.CATEGORY, "elytra-fly-plus", "Better elytrafly");
     }
@@ -82,6 +106,11 @@ public class ElytraFlyPlus extends Module {
     @EventHandler
     private void onPreTick(TickEvent.Pre event) {
         currentMode.onPreTick(event);
+    }
+
+    @EventHandler
+    private void onPostTick(TickEvent.Post event) {
+        currentMode.onPostTick(event);
     }
 
     @EventHandler
