@@ -2,6 +2,7 @@ package me.sun.unnamed;
 
 import me.sun.unnamed.modules.ActualBlink;
 import me.sun.unnamed.modules.AutoMeow;
+import me.sun.unnamed.modules.notifications.Notifications;
 import me.sun.unnamed.modules.efly.ElytraFlyPlus;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.GithubRepo;
@@ -13,6 +14,7 @@ import org.slf4j.Logger;
 public class Addon extends MeteorAddon {
     public static final Logger LOG = LogUtils.getLogger();
     public static final Category CATEGORY = new Category("Unnamed");
+    public static final Notifications notifications = new Notifications();
 
     @Override
     public void onInitialize() {
@@ -22,6 +24,7 @@ public class Addon extends MeteorAddon {
         Modules.get().add(new ElytraFlyPlus());
         Modules.get().add(new ActualBlink());
         Modules.get().add(new AutoMeow());
+        Modules.get().add(notifications);
     }
 
     @Override

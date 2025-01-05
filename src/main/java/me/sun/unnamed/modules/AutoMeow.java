@@ -1,6 +1,7 @@
 package me.sun.unnamed.modules;
 
 import me.sun.unnamed.Addon;
+import me.sun.unnamed.modules.notifications.NotificationType;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.settings.DoubleSetting;
 import meteordevelopment.meteorclient.settings.Setting;
@@ -19,7 +20,7 @@ public class AutoMeow extends Module {
 
     public long lastMeowTime, meowDelay;
     public List<String> meows = Arrays.asList("meow", "mrrow", "nyaa", "mrrrp nyaa", "mrrp");
-    public List<String> suffixes = Arrays.asList("~", "~ ;3", "~ :3", " ;3", " :3", " >~<", " >w<", "~ >w<");
+    public List<String> suffixes = Arrays.asList("~", "~ ;3", "~ :3", " ;3", " :3", " >~<", " >w<", "~ >w<", " >x<");
     private final SettingGroup sgGeneral = this.settings.getDefaultGroup();
     private Random random = new Random();
 
@@ -47,7 +48,10 @@ public class AutoMeow extends Module {
         }else {
             // you fucking idiot min is above max
             if(delayMinS.get() > delayMaxS.get()) {
-                ChatUtils.sendMsg(Text.of("Meow delay max must be above min"));
+                if (Addon.notifications.isActive()) {
+                    Addon.notifications.addNotification("Invalid Config (Auto Meow)", "Max Delay must be above Min Delay", 4000, NotificationType.ERROR);
+                }
+                ChatUtils.sendMsg(Text.of("Auto Meow: Max Delay must be above Min Delay"));
                 this.toggle();
                 meowDelay = 1000;
                 return;
