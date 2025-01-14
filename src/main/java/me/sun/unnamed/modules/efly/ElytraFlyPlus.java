@@ -18,6 +18,7 @@ public class ElytraFlyPlus extends Module {
     private final SettingGroup sgGeneral = this.settings.getDefaultGroup();
     private final SettingGroup sgSimple = this.settings.createGroup("Simple");
     private final SettingGroup sgPacket = this.settings.createGroup("Packet");
+    private final SettingGroup sgBoost = this.settings.createGroup("Boost");
 
     public final Setting<ElytraFlyPlusModes> flightMode = sgGeneral.add(new EnumSetting.Builder<ElytraFlyPlusModes>()
         .name("mode")
@@ -87,12 +88,31 @@ public class ElytraFlyPlus extends Module {
         .build()
     );
 
-    public final Setting<Double> accelerationPacket = sgSimple.add(new DoubleSetting.Builder()
+    public final Setting<Double> accelerationPacket = sgPacket.add(new DoubleSetting.Builder()
         .name("Acceleration")
         .description("The speed of acceleration.")
         .defaultValue(0.06d)
         .range(0.01d, 0.09d)
         .visible(() -> flightMode.get() == ElytraFlyPlusModes.Packet)
+        .build()
+    );
+
+    public final Setting<Double> maxSpeedBoost = sgBoost.add(new DoubleSetting.Builder()
+        .name("Max Speed")
+        .description("Max BPS.")
+        .defaultValue(45.0d)
+        .min(10.0d)
+        .sliderMax(100.0d)
+        .visible(() -> flightMode.get() == ElytraFlyPlusModes.Boost)
+        .build()
+    );
+
+    public final Setting<Double> accelerationBoost = sgBoost.add(new DoubleSetting.Builder()
+        .name("Acceleration")
+        .description("The speed of acceleration.")
+        .defaultValue(0.045d)
+        .range(0.01d, 0.08d)
+        .visible(() -> flightMode.get() == ElytraFlyPlusModes.Boost)
         .build()
     );
 
