@@ -1,4 +1,4 @@
-package me.sun.unnamed.modules.efly;
+package me.blindedbythesun.nya.modules.efly;
 
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;

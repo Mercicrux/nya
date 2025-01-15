@@ -1,10 +1,8 @@
-package me.sun.unnamed.modules.efly.impl;
+package me.blindedbythesun.nya.modules.efly.impl;
 
-import me.sun.unnamed.modules.efly.ElytraFlyPlusMode;
-import me.sun.unnamed.modules.efly.ElytraFlyPlusModes;
+import me.blindedbythesun.nya.modules.efly.ElytraFlyPlusMode;
+import me.blindedbythesun.nya.modules.efly.ElytraFlyPlusModes;
 import meteordevelopment.meteorclient.events.world.TickEvent;
-import meteordevelopment.meteorclient.utils.player.ChatUtils;
-import net.minecraft.text.Text;
 import net.minecraft.util.math.Vec3d;
 
 public class ElytraFlyPlusBoost extends ElytraFlyPlusMode {

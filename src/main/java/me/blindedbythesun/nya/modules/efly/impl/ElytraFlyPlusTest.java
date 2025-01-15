@@ -1,33 +1,42 @@
-package me.sun.unnamed.modules.efly.impl;
+package me.blindedbythesun.nya.modules.efly.impl;
 
-import me.sun.unnamed.modules.efly.ElytraFlyPlusMode;
-import me.sun.unnamed.modules.efly.ElytraFlyPlusModes;
+import me.blindedbythesun.nya.modules.efly.ElytraFlyPlusMode;
+import me.blindedbythesun.nya.modules.efly.ElytraFlyPlusModes;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.mixin.PlayerMoveC2SPacketAccessor;
+import meteordevelopment.meteorclient.utils.player.ChatUtils;
 import net.minecraft.network.packet.c2s.play.ClientCommandC2SPacket;
 import net.minecraft.network.packet.c2s.play.PlayerMoveC2SPacket;
+import net.minecraft.text.Text;
 import net.minecraft.util.math.Vec3d;
 
-public class ElytraFlyPlusPacket extends ElytraFlyPlusMode {
+public class ElytraFlyPlusTest extends ElytraFlyPlusMode {
 
-    public ElytraFlyPlusPacket() {
-        super(ElytraFlyPlusModes.Packet);
+    int ticks = 0;
+
+    public ElytraFlyPlusTest() {
+        super(ElytraFlyPlusModes.Test);
     }
 
     public void onPreTick(TickEvent.Pre event) {
-        if(!mc.player.isOnGround() && !mc.player.isSubmergedInWater() && mc.player.getVelocity().y <= 0) {
+        if(ticks == 0) {
             mc.getNetworkHandler().sendPacket(new ClientCommandC2SPacket(mc.player, ClientCommandC2SPacket.Mode.START_FALL_FLYING));
+        }
+        if(ticks < 25) {
+            ChatUtils.sendMsg(Text.of(String.valueOf(ticks)));
             float movementSpeed = (float) Math.sqrt(Math.pow(mc.player.getVelocity().x, 2) + Math.pow(mc.player.getVelocity().z, 2));
-            if(movementSpeed < settings.maxSpeedPacket.get()/20d) {
-                double speed = settings.accelerationPacket.get();
+            if(movementSpeed < 6.6) {
+                float speed = 0.06f;
                 Vec3d vec3d = mc.player.getRotationVector();
-                mc.player.setVelocity(mc.player.getVelocity().x + (vec3d.x*speed), -0.05 / Math.max(1,movementSpeed), mc.player.getVelocity().z + (vec3d.z*speed));
+                mc.player.setVelocity(mc.player.getVelocity().x + (vec3d.x*speed), -0.05, mc.player.getVelocity().z + (vec3d.z*speed));
             }
-            if(movementSpeed > 0.4) {
+            if(movementSpeed > 0.2) {
                 float pitch = (float) -9.175d / movementSpeed;
                 mc.player.setPitch(pitch);
             }
+        }else {
+            //mc.player.setVelocity(mc.player.getVelocity().x * 0.8, mc.player.getVelocity().y, mc.player.getVelocity().z * 0.8);
         }
     }
 
@@ -37,7 +46,9 @@ public class ElytraFlyPlusPacket extends ElytraFlyPlusMode {
 
     public void onSendPacket(PacketEvent.Send event) {
         if (event.packet instanceof PlayerMoveC2SPacket) {
-            ((PlayerMoveC2SPacketAccessor) event.packet).setOnGround(true);
+            if(ticks == 25) ((PlayerMoveC2SPacketAccessor) event.packet).setOnGround(true);
+            ticks++;
+            if(ticks > 30) ticks = 0;
         }
     }
 

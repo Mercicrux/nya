@@ -1,9 +1,9 @@
-package me.sun.unnamed;
+package me.blindedbythesun.nya;
 
-import me.sun.unnamed.modules.ActualBlink;
-import me.sun.unnamed.modules.AutoMeow;
-import me.sun.unnamed.modules.notifications.Notifications;
-import me.sun.unnamed.modules.efly.ElytraFlyPlus;
+import me.blindedbythesun.nya.modules.ActualBlink;
+import me.blindedbythesun.nya.modules.AutoMeow;
+import me.blindedbythesun.nya.modules.notifications.Notifications;
+import me.blindedbythesun.nya.modules.efly.ElytraFlyPlus;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
@@ -13,7 +13,7 @@ import org.slf4j.Logger;
 
 public class Addon extends MeteorAddon {
     public static final Logger LOG = LogUtils.getLogger();
-    public static final Category CATEGORY = new Category("Unnamed");
+    public static final Category CATEGORY = new Category("nya");
     public static final Notifications notifications = new Notifications();
 
     @Override
@@ -34,11 +34,11 @@ public class Addon extends MeteorAddon {
 
     @Override
     public String getPackage() {
-        return "me.sun.unnamed";
+        return "me.blindedbythesun.nya";
     }
 
     @Override
     public GithubRepo getRepo() {
-        return new GithubRepo("MeteorDevelopment", "meteor-addon-template");
+        return new GithubRepo("blindedbythesun", "nya");
     }
 }

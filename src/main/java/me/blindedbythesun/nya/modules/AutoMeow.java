@@ -1,7 +1,7 @@
-package me.sun.unnamed.modules;
+package me.blindedbythesun.nya.modules;
 
-import me.sun.unnamed.Addon;
-import me.sun.unnamed.modules.notifications.NotificationType;
+import me.blindedbythesun.nya.Addon;
+import me.blindedbythesun.nya.modules.notifications.NotificationType;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.settings.DoubleSetting;
 import meteordevelopment.meteorclient.settings.Setting;

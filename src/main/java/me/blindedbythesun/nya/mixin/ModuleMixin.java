@@ -1,7 +1,7 @@
-package me.sun.unnamed.mixin;
+package me.blindedbythesun.nya.mixin;
 
-import me.sun.unnamed.Addon;
-import me.sun.unnamed.modules.notifications.NotificationType;
+import me.blindedbythesun.nya.modules.notifications.NotificationType;
+import me.blindedbythesun.nya.Addon;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;

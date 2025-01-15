@@ -1,4 +1,4 @@
-package me.sun.unnamed.modules.notifications;
+package me.blindedbythesun.nya.modules.notifications;
 
 public enum NotificationType {
     INFO(0xFFFFFF),

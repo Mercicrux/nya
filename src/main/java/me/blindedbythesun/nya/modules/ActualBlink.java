@@ -1,6 +1,6 @@
-package me.sun.unnamed.modules;
+package me.blindedbythesun.nya.modules;
 
-import me.sun.unnamed.Addon;
+import me.blindedbythesun.nya.Addon;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.orbit.EventHandler;

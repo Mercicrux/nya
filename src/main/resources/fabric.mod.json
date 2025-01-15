@@ -1,24 +1,24 @@
 {
   "schemaVersion": 1,
-  "id": "unnamed-meteor-addon",
+  "id": "nya",
   "version": "${version}",
-  "name": "Unnamed Addon",
-  "description": "Addons, yay.",
+  "name": "nya",
+  "description": "addons :3",
   "authors": [
     "blindedbythesun"
   ],
   "contact": {
-    "repo": "https://github.com/blindedbythesun/unnamed-meteor-addons"
+    "repo": "https://github.com/blindedbythesun/nya"
   },
-  "icon": "assets/template/icon.png",
+  "icon": "assets/nya/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "me.sun.unnamed.Addon"
+      "me.blindedbythesun.nya.Addon"
     ]
   },
   "mixins": [
-    "addon-template.mixins.json"
+    "nya.mixins.json"
   ],
   "custom": {
     "meteor-client:color": "225,25,25"

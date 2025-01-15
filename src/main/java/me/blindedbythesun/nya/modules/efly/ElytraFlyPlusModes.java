@@ -1,4 +1,4 @@
-package me.sun.unnamed.modules.efly;
+package me.blindedbythesun.nya.modules.efly;
 
 public enum ElytraFlyPlusModes {
     Boost,

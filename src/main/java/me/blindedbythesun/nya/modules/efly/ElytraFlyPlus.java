@@ -1,10 +1,10 @@
-package me.sun.unnamed.modules.efly;
+package me.blindedbythesun.nya.modules.efly;
 
-import me.sun.unnamed.Addon;
-import me.sun.unnamed.modules.efly.impl.ElytraFlyPlusBoost;
-import me.sun.unnamed.modules.efly.impl.ElytraFlyPlusPacket;
-import me.sun.unnamed.modules.efly.impl.ElytraFlyPlusSimple;
-import me.sun.unnamed.modules.efly.impl.ElytraFlyPlusTest;
+import me.blindedbythesun.nya.Addon;
+import me.blindedbythesun.nya.modules.efly.impl.ElytraFlyPlusBoost;
+import me.blindedbythesun.nya.modules.efly.impl.ElytraFlyPlusPacket;
+import me.blindedbythesun.nya.modules.efly.impl.ElytraFlyPlusSimple;
+import me.blindedbythesun.nya.modules.efly.impl.ElytraFlyPlusTest;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.settings.DoubleSetting;

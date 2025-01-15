@@ -1,7 +1,7 @@
-package me.sun.unnamed.modules.efly.impl;
+package me.blindedbythesun.nya.modules.efly.impl;
 
-import me.sun.unnamed.modules.efly.ElytraFlyPlusMode;
-import me.sun.unnamed.modules.efly.ElytraFlyPlusModes;
+import me.blindedbythesun.nya.modules.efly.ElytraFlyPlusMode;
+import me.blindedbythesun.nya.modules.efly.ElytraFlyPlusModes;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import net.minecraft.network.packet.c2s.play.PlayerMoveC2SPacket;
