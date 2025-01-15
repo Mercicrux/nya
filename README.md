@@ -2,8 +2,7 @@
 	<h1>Unnamed Addons</h1>
 	<p>I just add stuff I want, I'm not big on developing combat modules, so expect mainly utility.</p>
 	<img src="https://img.shields.io/badge/Minecraft%20Version-1.21.1-violet" alt="Minecraft Version">
-	<img src="https://img.shields.io/github/actions/workflow/status/blindedbythesun/unnamed-meteor-addons/dev_build.yml
-" alt="Latest Build Status">
+	<img src="https://img.shields.io/github/actions/workflow/status/blindedbythesun/unnamed-meteor-addons/dev_build.yml" alt="Latest Build Status">
 </div>
 
 ## How to use
