@@ -2,12 +2,12 @@
 	<h1>nya</h1>
 	<p>Utility addon designed for UNCP and constantiam</p>
 	<img src="https://img.shields.io/badge/Minecraft%20Version-1.21.1-violet" alt="Minecraft Version">
-	<img src="https://img.shields.io/github/actions/workflow/status/blindedbythesun/unnamed-meteor-addons/dev_build.yml" alt="Latest Build Status">
+	<img src="https://img.shields.io/github/actions/workflow/status/blindedbythesun/nya/dev_build.yml" alt="Latest Build Status">
 </div>
 
 ## How to use
 
- - Download the [latest development build](https://github.com/blindedbythesun/unnamed-meteor-addons/releases/tag/latest)
+ - Download the [latest development build](https://github.com/blindedbythesun/nya/releases/tag/latest)
  - Place it in your mods folder with meteor
 
 ## How to build
