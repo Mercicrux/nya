@@ -5,10 +5,16 @@
 	<img src="https://img.shields.io/github/actions/workflow/status/blindedbythesun/nya/dev_build.yml" alt="Latest Build Status">
 </div>
 
+
 ## How to use
 
  - Download the [latest development build](https://github.com/blindedbythesun/nya/releases/tag/latest)
  - Place it in your mods folder with meteor
+
+## Credits
+
+- Me
+- CursedSeed (AntiBlyat, Mimic)
 
 ## How to build
 
