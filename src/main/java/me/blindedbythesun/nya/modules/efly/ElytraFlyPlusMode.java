@@ -11,6 +11,8 @@ public class ElytraFlyPlusMode {
     protected final ElytraFlyPlus settings;
     private final ElytraFlyPlusModes type;
 
+    public void onActivate() {}
+    public void onDeactivate() {}
     public void onPreTick(TickEvent.Pre event) {}
     public void onPostTick(TickEvent.Post event) {}
     public void onSendPacket(PacketEvent.Send event) {}
