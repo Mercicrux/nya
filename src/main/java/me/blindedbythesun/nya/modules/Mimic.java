@@ -57,16 +57,16 @@ public class Mimic extends Module {
 
     @Override
     public void onActivate() {
-        if(target.get().isEmpty()) {
+        String trimmedTarget = target.get().trim();
+        if (trimmedTarget.isEmpty()) {
             warning("Target name is empty, please set a player name.");
             if (Addon.notifications.isActive()) {
                 Addon.notifications.addNotification("Invalid Config (Mimic)", "Target name is empty, please set a player name.", 4000, NotificationType.WARNING);
+
             }
-            this.toggle();
-            return;
         }
 
-        if(!isPlayerOnline(target.get())) {
+        if(!isPlayerOnline(trimmedTarget)) {
             String message = String.format("Your mimic target, %s, is not online", target.get());
             warning(message);
             if (Addon.notifications.isActive()) {
@@ -79,22 +79,24 @@ public class Mimic extends Module {
     public void onPacket(PacketEvent.Receive event) {
         if(!(event.packet instanceof GameMessageS2CPacket packet)) return;
 
-        String formattedMessage = packet.content().getString();
-        String senderName = extractSenderName(formattedMessage);
+        String formattedMessage = packet.content().getString().trim();
+        String targetName = target.get().trim();
+        if (formattedMessage.isEmpty()) return; // no null check since it cannot be null
 
-        if(!senderName.equalsIgnoreCase(target.get())) return;
+        String senderName = extractSenderName(formattedMessage);
+        if (!senderName.equalsIgnoreCase(targetName)) return;
 
         String messageContent = extractMessageContent(formattedMessage);
 
         if(antiTrolling.get()) {
-            messageContent = messageContent.replaceAll("(?i)" + mc.player.getName().getString(), target.get());
+            messageContent = messageContent.replaceAll("(?i)" + mc.player.getName().getString(), targetName);
         }
 
         if(!messageContent.isEmpty()) {
             mc.player.networkHandler.sendChatMessage(greenText.get() ? ">" + messageContent : messageContent);
 
-            if(privateMessageEnabled.get() && !privateMessageContent.get().isEmpty()) {
-                mc.player.networkHandler.sendCommand("w " + target.get() + " " + privateMessageContent.get());
+            if(privateMessageEnabled.get() && !privateMessageContent.get().trim().isEmpty()) {
+                mc.player.networkHandler.sendCommand("w " + targetName + " " + privateMessageContent.get().trim());
             }
         }
     }
