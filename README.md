@@ -1,8 +1,10 @@
 <div align="center">
+    <img src="/src/main/resources/assets/nya/icon.png" alt="logo" width="25%"/>
+    <br>
+    <img src="https://img.shields.io/badge/Minecraft%20Version-1.21.1-violet" alt="Minecraft Version">
+	<img src="https://img.shields.io/github/actions/workflow/status/blindedbythesun/nya/dev_build.yml" alt="Latest Build Status">
 	<h1>nya</h1>
 	<p>Utility addon designed for UNCP and constantiam</p>
-	<img src="https://img.shields.io/badge/Minecraft%20Version-1.21.1-violet" alt="Minecraft Version">
-	<img src="https://img.shields.io/github/actions/workflow/status/blindedbythesun/nya/dev_build.yml" alt="Latest Build Status">
 </div>
 
 
