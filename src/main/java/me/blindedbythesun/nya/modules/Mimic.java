@@ -67,7 +67,7 @@ public class Mimic extends Module {
         }
 
         if(!isPlayerOnline(target.get())) {
-            String message = String.format("Your mimic target, %s, is not online");
+            String message = String.format("Your mimic target, %s, is not online", target.get());
             warning(message);
             if (Addon.notifications.isActive()) {
                 Addon.notifications.addNotification("Mimic", message, 4000, NotificationType.WARNING);

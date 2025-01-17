@@ -1,9 +1,6 @@
 package me.blindedbythesun.nya;
 
-import me.blindedbythesun.nya.modules.ActualBlink;
-import me.blindedbythesun.nya.modules.AntiBlyat;
-import me.blindedbythesun.nya.modules.AutoMeow;
-import me.blindedbythesun.nya.modules.Mimic;
+import me.blindedbythesun.nya.modules.*;
 import me.blindedbythesun.nya.modules.notifications.Notifications;
 import me.blindedbythesun.nya.modules.efly.ElytraFlyPlus;
 import com.mojang.logging.LogUtils;
@@ -29,6 +26,7 @@ public class Addon extends MeteorAddon {
         Modules.get().add(notifications);
         Modules.get().add(new Mimic());
         Modules.get().add(new AntiBlyat());
+        Modules.get().add(new Suffix());
     }
 
     @Override
