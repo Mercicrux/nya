@@ -16,35 +16,35 @@ public class Mimic extends Module {
     private final SettingGroup sgGeneral = this.settings.getDefaultGroup();
 
     private final Setting<String> target = sgGeneral.add(new StringSetting.Builder()
-        .name("Target Username")
+        .name("target-username")
         .description("The username of the player whose messages you want to mimic")
         .defaultValue("popbob")
         .build()
     );
 
     private final Setting<Boolean> greenText = sgGeneral.add(new BoolSetting.Builder()
-        .name("Green Text")
+        .name("green-text")
         .description("Enables green text for mimicked messages by adding a > prefix")
         .defaultValue(false)
         .build()
     );
 
     private final Setting<Boolean> antiTrolling = sgGeneral.add(new BoolSetting.Builder()
-        .name("Anti Troll")
+        .name("anti-troll")
         .description("Protect yourself from being trolled by replacing your name with the targets")
         .defaultValue(true)
         .build()
     );
 
     private final Setting<Boolean> privateMessageEnabled = sgGeneral.add(new BoolSetting.Builder()
-        .name("Enable Private Message")
+        .name("enable-private-message")
         .description("Enable sending a private message to the mimicked player")
         .defaultValue(false)
         .build()
     );
 
     private final Setting<String> privateMessageContent = sgGeneral.add(new StringSetting.Builder()
-        .name("Private Message Text")
+        .name("private-message-text")
         .description("The private message to send to the mimicked player")
         .defaultValue("nya")
         .visible(privateMessageEnabled::get)

@@ -25,7 +25,7 @@ public class AutoMeow extends Module {
     private Random random = new Random();
 
     public final Setting<Double> delayMinS = sgGeneral.add(new DoubleSetting.Builder()
-        .name("Min Delay")
+        .name("min-delay")
         .description("How many seconds before meowing.")
         .defaultValue(60.0d)
         .min(5.0d)
@@ -34,7 +34,7 @@ public class AutoMeow extends Module {
     );
 
     public final Setting<Double> delayMaxS = sgGeneral.add(new DoubleSetting.Builder()
-        .name("Max Delay")
+        .name("max-delay")
         .description("How many seconds before meowing.")
         .defaultValue(60.0d)
         .min(5.0d)

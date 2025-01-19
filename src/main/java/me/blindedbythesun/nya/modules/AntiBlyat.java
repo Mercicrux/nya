@@ -14,7 +14,7 @@ public class AntiBlyat extends Module {
     private final SettingGroup sgGeneral = this.settings.getDefaultGroup();
 
     private final Setting<FilterMode> filterMode = sgGeneral.add(new EnumSetting.Builder<FilterMode>()
-        .name("Filter Mode")
+        .name("filter-mode")
         .description("How cyrillic words in chat are filtered")
         .defaultValue(FilterMode.HideMessage)
         .build()

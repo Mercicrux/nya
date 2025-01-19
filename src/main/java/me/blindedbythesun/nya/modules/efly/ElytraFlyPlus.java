@@ -40,7 +40,7 @@ public class ElytraFlyPlus extends Module {
     }
 
     public final Setting<Double> verticalAngle = sgSimple.add(new DoubleSetting.Builder()
-        .name("Vertical Angle")
+        .name("vertical-angle")
         .description("How much to affect aim when going vertically.")
         .defaultValue(20.0d)
         .min(10.0d)
@@ -50,7 +50,7 @@ public class ElytraFlyPlus extends Module {
     );
 
     public final Setting<Double> verticalSpeed = sgSimple.add(new DoubleSetting.Builder()
-        .name("Vertical Speed")
+        .name("vertical-speed")
         .description("How much to affect aim when going vertically.")
         .defaultValue(0.015d)
         .range(0.005d, 0.05d)
@@ -59,7 +59,7 @@ public class ElytraFlyPlus extends Module {
     );
 
     public final Setting<Double> horizontalAcceleration = sgSimple.add(new DoubleSetting.Builder()
-        .name("Horizontal Acceleration")
+        .name("horizontal-acceleration")
         .description("The speed of acceleration.")
         .defaultValue(0.035d)
         .range(0.01d, 0.075d)
@@ -68,7 +68,7 @@ public class ElytraFlyPlus extends Module {
     );
 
     public final Setting<Double> maxSpeedSimple = sgSimple.add(new DoubleSetting.Builder()
-        .name("Max Speed")
+        .name("max-speed")
         .description("Max BPS.")
         .defaultValue(48.0d)
         .min(10.0d)
@@ -78,7 +78,7 @@ public class ElytraFlyPlus extends Module {
     );
 
     public final Setting<Double> verticalAngleSemiControl = sgSemiControl.add(new DoubleSetting.Builder()
-        .name("Vertical Angle")
+        .name("vertical-angle")
         .description("How much to affect aim when going vertically.")
         .defaultValue(20.0d)
         .min(10.0d)
@@ -88,7 +88,7 @@ public class ElytraFlyPlus extends Module {
     );
 
     public final Setting<Double> verticalSpeedSemiControl = sgSemiControl.add(new DoubleSetting.Builder()
-        .name("Vertical Speed")
+        .name("vertical-speed")
         .description("How much to affect aim when going vertically.")
         .defaultValue(0.015d)
         .range(0.005d, 0.05d)
@@ -97,7 +97,7 @@ public class ElytraFlyPlus extends Module {
     );
 
     public final Setting<Double> horizontalAccelerationSemiControl = sgSemiControl.add(new DoubleSetting.Builder()
-        .name("Horizontal Acceleration")
+        .name("horizontal-acceleration")
         .description("The speed of acceleration.")
         .defaultValue(0.035d)
         .range(0.01d, 0.075d)
@@ -106,7 +106,7 @@ public class ElytraFlyPlus extends Module {
     );
 
     public final Setting<Double> maxSpeedSemiControl = sgSemiControl.add(new DoubleSetting.Builder()
-        .name("Max Speed")
+        .name("max-speed")
         .description("Max BPS.")
         .defaultValue(48.0d)
         .min(10.0d)
@@ -116,7 +116,7 @@ public class ElytraFlyPlus extends Module {
     );
 
     public final Setting<Double> maxSpeedPacket = sgPacket.add(new DoubleSetting.Builder()
-        .name("Max Speed")
+        .name("max-speed")
         .description("Max BPS.")
         .defaultValue(70.0d)
         .min(10.0d)
@@ -126,7 +126,7 @@ public class ElytraFlyPlus extends Module {
     );
 
     public final Setting<Double> accelerationPacket = sgPacket.add(new DoubleSetting.Builder()
-        .name("Acceleration")
+        .name("acceleration")
         .description("The speed of acceleration.")
         .defaultValue(0.06d)
         .range(0.01d, 0.09d)
@@ -135,7 +135,7 @@ public class ElytraFlyPlus extends Module {
     );
 
     public final Setting<Double> maxSpeedBoost = sgBoost.add(new DoubleSetting.Builder()
-        .name("Max Speed")
+        .name("max-speed")
         .description("Max BPS.")
         .defaultValue(45.0d)
         .min(10.0d)
@@ -145,7 +145,7 @@ public class ElytraFlyPlus extends Module {
     );
 
     public final Setting<Double> accelerationBoost = sgBoost.add(new DoubleSetting.Builder()
-        .name("Acceleration")
+        .name("acceleration")
         .description("The speed of acceleration.")
         .defaultValue(0.045d)
         .range(0.01d, 0.08d)

@@ -19,14 +19,14 @@ public class Suffix extends Module {
     Random rand = new Random();
 
     private final Setting<List<String>> messages = sgGeneral.add(new StringListSetting.Builder()
-        .name("Suffixes")
+        .name("suffixes")
         .description("Strings to append to your messages")
         .defaultValue(List.of("nya~"))
         .build()
     );
 
     private final Setting<Boolean> separator = sgGeneral.add(new BoolSetting.Builder()
-        .name("Separator")
+        .name("separator")
         .description("Separates your message and suffix with ⏐")
         .defaultValue(true)
         .build()
