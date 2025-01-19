@@ -16,7 +16,7 @@
 ## Credits
 
 - Me
-- CursedSeed (AntiBlyat, Mimic)
+- CursedSeed (AntiBlyat, Mimic, MinecartStashDetector)
 
 ## How to build
 
