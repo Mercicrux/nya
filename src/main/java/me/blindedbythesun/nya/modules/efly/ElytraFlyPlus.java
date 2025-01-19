@@ -77,7 +77,7 @@ public class ElytraFlyPlus extends Module {
         .build()
     );
 
-    public final Setting<Double> verticalAngleSemiControl = sgSimple.add(new DoubleSetting.Builder()
+    public final Setting<Double> verticalAngleSemiControl = sgSemiControl.add(new DoubleSetting.Builder()
         .name("Vertical Angle")
         .description("How much to affect aim when going vertically.")
         .defaultValue(20.0d)
@@ -87,7 +87,7 @@ public class ElytraFlyPlus extends Module {
         .build()
     );
 
-    public final Setting<Double> verticalSpeedSemiControl = sgSimple.add(new DoubleSetting.Builder()
+    public final Setting<Double> verticalSpeedSemiControl = sgSemiControl.add(new DoubleSetting.Builder()
         .name("Vertical Speed")
         .description("How much to affect aim when going vertically.")
         .defaultValue(0.015d)
@@ -96,7 +96,7 @@ public class ElytraFlyPlus extends Module {
         .build()
     );
 
-    public final Setting<Double> horizontalAccelerationSemiControl = sgSimple.add(new DoubleSetting.Builder()
+    public final Setting<Double> horizontalAccelerationSemiControl = sgSemiControl.add(new DoubleSetting.Builder()
         .name("Horizontal Acceleration")
         .description("The speed of acceleration.")
         .defaultValue(0.035d)
@@ -105,7 +105,7 @@ public class ElytraFlyPlus extends Module {
         .build()
     );
 
-    public final Setting<Double> maxSpeedSemiControl = sgSimple.add(new DoubleSetting.Builder()
+    public final Setting<Double> maxSpeedSemiControl = sgSemiControl.add(new DoubleSetting.Builder()
         .name("Max Speed")
         .description("Max BPS.")
         .defaultValue(48.0d)
