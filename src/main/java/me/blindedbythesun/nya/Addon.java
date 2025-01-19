@@ -27,6 +27,7 @@ public class Addon extends MeteorAddon {
         Modules.get().add(new Mimic());
         Modules.get().add(new AntiBlyat());
         Modules.get().add(new Suffix());
+        Modules.get().add(new MinecartStashDetector());
     }
 
     @Override
