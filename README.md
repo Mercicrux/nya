@@ -7,15 +7,9 @@
 	<p>Utility addon designed for UNCP and constantiam</p>
 </div>
 
-
-## How to use
-
- - Download the [latest development build](https://github.com/blindedbythesun/nya/releases/tag/latest)
- - Place it in your mods folder with meteor
-
 ## Credits
 
-- Me
+- Blindedbythesun
 - CursedSeed (AntiBlyat, Mimic, MinecartStashDetector)
 
 ## How to build
@@ -24,10 +18,6 @@
 - Make sure you have 1.21.1 installed on the Minecraft Launcher
 - Build the jar using the gradle `build` task
 - Add it to your mod folder (Meteor required)
-
-## Support
-
-Ask me on constantiam for help. If you don't know who I am, I question how you even found this.
 
 ## License
 
