@@ -19,7 +19,7 @@ public class AutoMeow extends Module {
 
 
     public long lastMeowTime, meowDelay;
-    public List<String> meows = Arrays.asList("meow", "mrrrp meow",);
+    public List<String> meows = Arrays.asList("meow", "mrrrp meow");
     public List<String> suffixes = Arrays.asList("~", "~ ;3", "~ :3", " ;3", " :3", " >~<", " >w<", "~ >w<", " >x<");
     private final SettingGroup sgGeneral = this.settings.getDefaultGroup();
     private Random random = new Random();
